@@ -1,5 +1,5 @@
-body .content-fluid figure{
-	background-image: url("/../img/bocanegra-dunkel.jpg");
+body .comparison figure{
+	background-image: url("./../img/bocanegra-dunkel.jpg");
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -10,21 +10,88 @@ body .content-fluid figure{
 
 .titulo#rightTittle{
 	right: 0;
+
+    background: #fff;
 }
 
+.descripcion#rightDesc{
+    left: 260px;
+    width: 360px;
 
-figure .divisor{ //check css
-	background-image: url("/../img/bocanegra-pilsner.jpg");
-	background-size: cover;
-	background-position: center;
-	position: relative;
-	width: 100%;
-	height: 100%;
-	margin: 0;
+    color: #fff;
+}
+
+.titulo{
+    position: absolute;
+    width: 50%;
+    top: calc(50% - 9px);
+    text-align: center;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.descripcion{
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    position: absolute;
+    top: calc(50% - 160px);
+    width: 340px;
+}
+
+.comparison {
+    width: 100%;
+    height: 100% !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+figure .divisor{
+	background-image: url("./../img/bocanegra-pilsner.jpg");
+    background-size: cover;
+    position: absolute;
+    background-position: center;
+    width: 50%;
+    -moz-box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+    bottom: 0;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.inDivisor{
+        width: 100%;
+    overflow: hidden;
+    height: 100%;
+    position: absolute;
+}
+
+.inception{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .titulo#leftTittle{
 	left: 0;
+
+    background: #fff;
+}
+
+.descripcion#leftDesc{
+    right: 280px;
+
+    color: #fff;
 }
 
 div#comparison figure #divisor:after {
