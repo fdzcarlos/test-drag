@@ -94,7 +94,22 @@ figure .divisor{
     color: #fff;
 }
 
-div#comparison figure #divisor:after {
+input[type=range]:active {
+    outline: none;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    top: 50%;
+    left: -2%;
+    background-color: transparent;
+    width: 102%;
+    opacity: 0;
+}
+
+div.comparison figure .divisor:after {
     content: "Desliza";
     background-color: #f3e4b2;
     position: absolute;
@@ -109,8 +124,55 @@ div#comparison figure #divisor:after {
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
-    background-image: url(../../images/common/sprite.svg), url(../../images/common/sprite.svg);
-    background-position: -34px -537px, 74px -449px;
-    background-repeat: no-repeat;
+    //background-image: url(../../images/common/sprite.svg), url(../../images/common/sprite.svg);
+    //background-position: -34px -537px, 74px -449px;
+    //background-repeat: no-repeat;
     opacity: 0;
+}
+
+div.comparison figure .divisor:after {
+    opacity: 1;
+    -webkit-transition: all ease 0.5s 1.8s;
+    -moz-transition: all ease 0.5s 1.8s;
+    -o-transition: all ease 0.5s 1.8s;
+    transition: all ease 0.5s 1.8s;
+    top: calc(50% - 10px);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: #020202;
+    position: relative;
+    min-height: 100%;
+    color: #f3e4b2;
+    background-size: cover;
+    background-position: center;
+    //font-family: 'Roboto Slab', serif;
+    -webkit-backface-visibility: hidden;
+}
+
+.titutlo.grow {
+  font-size: 4.8rem;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  top: calc(50% - 27px);
+}
+@media only screen and (max-width: 1050px) {
+  .titutlo.grow {
+    font-size: 3.8rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .titutlo.grow {
+    font-size: 2.2rem;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    top: calc(50% - 9px);
+  }
 }
